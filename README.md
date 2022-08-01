@@ -19,6 +19,27 @@ dependencies {
     ...
 }
 
+HOW TO PASS VALUES
+
+Go to VerificationRequest.kt under io.comono.comodo_library.data.remote.dto and enter your custom strings in the quotes below to pass your parameters to the SDK for validation and handling. Also, don't for get to import the page or fragment passing the values so the strings' actual values can be processes and not the strings themselves. Use the first three entries below as an example.
+
+@Serializable
+data class CreateNewRequest(
+    val workitemId: String? = "$workitemId",
+    val customerName: String? = "$customerName",
+    val customerEmail: String? = "customerEmail",
+    val branchCode: String? = "",
+    val segmentId: String? = "",
+    val address: String? = "",
+    val landmark: String? = "",
+    val state: String? = "",
+    val lga: String? = "",
+    val createdBy: String? = "",
+    val customerImage: String? = "",
+    val Latitude: String? = "",
+    val Longitude: String? = ""
+)
+
 DEVELOPMENT CONSIDERATIONS FOR LIBRARY MODULES
 
 As you integrate the library modules and dependent apps, be aware of the following behaviors and limitations.
